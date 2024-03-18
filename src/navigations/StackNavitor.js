@@ -21,7 +21,7 @@ const Stack = createStackNavigator();
 
 const StackNavigator = () => {
   return (
-    <Stack.Navigator headerMode="none">
+    <Stack.Navigator screenOptions={{ headerMode: "false" }}>
       <Stack.Screen name="Ana Sayfa" component={HomeScreen} />
       <Stack.Screen name="Mainnet" component={MainnetScreen} />
       <Stack.Screen name="Pi Browser" component={PiBrowserScreen} />

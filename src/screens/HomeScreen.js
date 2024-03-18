@@ -13,7 +13,7 @@ import Header from "../components/Header";
 import { Entypo } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-const HomeScreen = ({ name }) => {
+const HomeScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <ImageBackground
