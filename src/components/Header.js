@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  Linking,
+} from "react-native";
 import { FontAwesome } from "@expo/vector-icons"; // varsayılan olarak FontAwesome kullanıyorum, ancak react-native-vector-icons kütüphanesini de kullanabilirsiniz
 import { useNavigation } from "@react-navigation/native";
 
@@ -14,6 +20,13 @@ const Header = ({ Veri }) => {
   const handleMenuItemPress = (screenName) => {
     navigation.navigate(screenName);
     setMenuOpen(false); // Menüyü kapat
+  };
+
+  const onPressButton = (websiteURL) => {
+    // Linki aç
+    Linking.openURL(websiteURL).catch((err) =>
+      console.error("Link açılamadı:", err)
+    );
   };
 
   return (
@@ -60,12 +73,16 @@ const Header = ({ Veri }) => {
             <Text style={styles.menuItem}>SSS</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => handleMenuItemPress("White Paper")}>
+          <TouchableOpacity
+            onPress={() =>
+              onPressButton("https://mifutoken.com/uploads/white-paper.pdf")
+            }
+          >
             <Text style={styles.menuItem}>White Paper</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
-            onPress={() => handleMenuItemPress("Destek Merkezi")}
+            onPress={() => onPressButton("https://mifutoken.com/iletisim")}
           >
             <Text style={styles.menuItem}>Destek Merkezi</Text>
           </TouchableOpacity>
@@ -91,8 +108,23 @@ const Header = ({ Veri }) => {
           </View>
 
           <View style={{ flexDirection: "row" }}>
-            <Text style={styles.menuItem}>ToS</Text>
-            <Text style={styles.menuItem}>Privac Policy</Text>
+            <Text style={styles.menuItem}></Text>
+
+            <TouchableOpacity
+              onPress={() =>
+                onPressButton("https://mifutoken.com/kullanim-sartlari")
+              }
+            >
+              <Text style={styles.menuItem}>Kullanım Şartları</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              onPress={() =>
+                onPressButton("https://mifutoken.com/gizlilik-politikasi")
+              }
+            >
+              <Text style={styles.menuItem}>Gizlilik Politikası</Text>
+            </TouchableOpacity>
           </View>
           <Text> v1</Text>
         </View>
