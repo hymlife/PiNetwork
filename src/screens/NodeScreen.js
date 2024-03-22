@@ -32,10 +32,9 @@ const NodeScreen = () => {
         }}
       >
         <View style={{ marginHorizontal: 25 }}>
-          <Text style={{ fontSize: 25 }}>Pİ Node'a girişi onaylayın</Text>
+          <Text style={{ fontSize: 25 }}>PLorem ipsum dolor sit amet</Text>
           <Text style={{ marginTop: 15 }}>
-            Bilgisayarınızda Pi Node uygulamasındaki giriş kodunu yazarak node'a
-            giriş yapın
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </Text>
         </View>
 
@@ -66,11 +65,9 @@ const NodeScreen = () => {
           >
             <Text>DEVAM</Text>
           </TouchableOpacity>
-          <Text style={{ marginTop: 15 }}>
-            pi Node uygulamasını şuradan indirin
-          </Text>
+          <Text style={{ marginTop: 15 }}>lorem5 ipsum dolor sit amet</Text>
           <TouchableOpacity>
-            <Text style={{ marginTop: 15 }}>node.minepi.com</Text>
+            <Text style={{ marginTop: 15 }}>Lorem ipsum dolor</Text>
           </TouchableOpacity>
         </View>
 
@@ -85,12 +82,11 @@ const NodeScreen = () => {
           }}
         >
           <Text style={{ fontSize: 15 }}>
-            node.inepi.com dışında hiçbir kaynaktanda indirilmiş node yazılımını
-            yüklemeyin
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </Text>
           <Text>
-            bu sayfada resmi pi node uygulaması dışında üretilmiş hiçbir kod
-            girmeyin bunu yapmak hesabınızın çalınmasına sebep olabilir
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit.
           </Text>
         </View>
       </View>

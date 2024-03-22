@@ -16,12 +16,16 @@ import WhitePaperScreen from "../screens/WhitePaperScreen";
 import DestekMerkeziScreen from "../screens/DestekMerkeziScreen";
 import CekirdekEkipScreen from "../screens/CekirdekEkipScreen";
 import ProfilScreen from "../screens/ProfilScreen";
+import LoginScreen from "../screens/LoginScreen";
+import RegisterScreen from "../screens/RegisterScreen";
 
 const Stack = createStackNavigator();
 
 const StackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={{ headerMode: "false" }}>
+      <Stack.Screen name="Giriş" component={LoginScreen} />
+      <Stack.Screen name="Kaydol" component={RegisterScreen} />
       <Stack.Screen name="Ana Sayfa" component={HomeScreen} />
       <Stack.Screen name="Mainnet" component={MainnetScreen} />
       <Stack.Screen name="Pi Browser" component={PiBrowserScreen} />

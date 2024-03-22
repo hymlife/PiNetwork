@@ -10,11 +10,11 @@ import { MaterialIcons } from "@expo/vector-icons";
 const PiUygulamalariScreen = () => {
   return (
     <View>
-      <HeaderBack Veri="Pi Uygulamaları" />
+      <HeaderBack Veri="Uygulamalar" />
 
       <View style={styles.buttonArea}>
         <TouchableOpacity style={styles.button}>
-          <Ionicons name="chatbox-outline" size={40} color="Pink" />
+          <Ionicons name="chatbox-outline" size={40} color="black" />
           <Text>chat</Text>
         </TouchableOpacity>
 

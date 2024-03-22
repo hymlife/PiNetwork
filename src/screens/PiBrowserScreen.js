@@ -5,11 +5,9 @@ import HeaderBack from "../components/HeaderBack";
 const PiBrowserScreen = () => {
   return (
     <View>
-      <HeaderBack Veri="Pi Browser" />
+      <HeaderBack Veri="Browser" />
       <View style={styles.headerArea}>
-        <Text style={styles.headerText}>
-          Pi Tarayıcı yükleyin ve giriş yapın
-        </Text>
+        <Text style={styles.headerText}>Browseri yükleyin ve giriş yapın</Text>
       </View>
 
       <View style={{ marginHorizontal: "3%", marginTop: 15 }}>
@@ -47,7 +45,7 @@ const PiBrowserScreen = () => {
           paddingVertical: 10,
         }}
       >
-        <Text>Pi Tarayıcıya Giriş Yap</Text>
+        <Text> Tarayıcıya Giriş Yap</Text>
       </TouchableOpacity>
 
       <View style={{ marginHorizontal: "3%", marginTop: 15 }}>

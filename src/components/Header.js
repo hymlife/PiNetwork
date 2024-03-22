@@ -6,8 +6,12 @@ import {
   StyleSheet,
   Linking,
 } from "react-native";
-import { FontAwesome } from "@expo/vector-icons"; // varsayılan olarak FontAwesome kullanıyorum, ancak react-native-vector-icons kütüphanesini de kullanabilirsiniz
+
 import { useNavigation } from "@react-navigation/native";
+
+//fontlar
+import { AntDesign } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
 
 const Header = ({ Veri }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -44,17 +48,17 @@ const Header = ({ Veri }) => {
           </TouchableOpacity>
 
           <TouchableOpacity onPress={() => handleMenuItemPress("Mainnet")}>
-            <Text style={styles.menuItem}>Mainnet</Text>
+            <Text style={styles.menuItem}>Bakiye</Text>
           </TouchableOpacity>
 
           <TouchableOpacity onPress={() => handleMenuItemPress("Pi Browser")}>
-            <Text style={styles.menuItem}>Pi Browser</Text>
+            <Text style={styles.menuItem}>Browser</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
             onPress={() => handleMenuItemPress("Pi Uygulamaları")}
           >
-            <Text style={styles.menuItem}>Pi Uygulamaları</Text>
+            <Text style={styles.menuItem}>Uygulamaları</Text>
           </TouchableOpacity>
 
           <TouchableOpacity onPress={() => handleMenuItemPress("Roller")}>
@@ -69,7 +73,9 @@ const Header = ({ Veri }) => {
             <Text style={styles.menuItem}>Node</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => handleMenuItemPress("SSS")}>
+          <TouchableOpacity
+            onPress={() => onPressButton("https://mifutoken.com/s-s-s")}
+          >
             <Text style={styles.menuItem}>SSS</Text>
           </TouchableOpacity>
 
@@ -99,34 +105,59 @@ const Header = ({ Veri }) => {
 
           <Text style={{ textAlign: "center" }}>Bizi takip edin</Text>
 
-          <View style={{ flexDirection: "row" }}>
-            <Text style={styles.menuItem}>icons</Text>
-            <Text style={styles.menuItem}>icons</Text>
-            <Text style={styles.menuItem}>icons</Text>
-            <Text style={styles.menuItem}>icons</Text>
-            <Text style={styles.menuItem}>icons</Text>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-between",
+            }}
+          >
+            <TouchableOpacity
+              onPress={() => onPressButton("https://mifutoken.com/iletisim")}
+              style={styles.socialButton}
+            >
+              <AntDesign name="twitter" size={24} color="black" />
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => onPressButton("https://mifutoken.com/iletisim")}
+              style={styles.socialButton}
+            >
+              <AntDesign name="instagram" size={24} color="black" />
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => onPressButton("https://mifutoken.com/iletisim")}
+              style={styles.socialButton}
+            >
+              <AntDesign name="youtube" size={24} color="black" />
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => onPressButton("https://mifutoken.com/iletisim")}
+              style={styles.socialButton}
+            >
+              <AntDesign name="facebook-square" size={24} color="black" />
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => onPressButton("https://mifutoken.com/iletisim")}
+              style={styles.socialButton}
+            >
+              <FontAwesome name="telegram" size={24} color="black" />
+            </TouchableOpacity>
           </View>
 
-          <View style={{ flexDirection: "row" }}>
-            <Text style={styles.menuItem}></Text>
+          <TouchableOpacity
+            onPress={() =>
+              onPressButton("https://mifutoken.com/kullanim-sartlari")
+            }
+          >
+            <Text style={styles.menuItem}>Kullanım Şartları</Text>
+          </TouchableOpacity>
 
-            <TouchableOpacity
-              onPress={() =>
-                onPressButton("https://mifutoken.com/kullanim-sartlari")
-              }
-            >
-              <Text style={styles.menuItem}>Kullanım Şartları</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              onPress={() =>
-                onPressButton("https://mifutoken.com/gizlilik-politikasi")
-              }
-            >
-              <Text style={styles.menuItem}>Gizlilik Politikası</Text>
-            </TouchableOpacity>
-          </View>
-          <Text> v1</Text>
+          <TouchableOpacity
+            onPress={() =>
+              onPressButton("https://mifutoken.com/gizlilik-politikasi")
+            }
+          >
+            <Text style={styles.menuItem}>Gizlilik Politikası</Text>
+          </TouchableOpacity>
         </View>
       )}
 
@@ -169,6 +200,7 @@ const styles = StyleSheet.create({
   menuOpen: {
     zIndex: 1, // Menü açıkken Header'ın üstte olmasını sağlar
   },
+  socialButton: { margin: 5 },
 });
 
 export default Header;

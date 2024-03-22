@@ -17,19 +17,19 @@ import HeaderBack from "../components/HeaderBack";
 const MainnetScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <HeaderBack Veri="mainnet" />
-
+      <HeaderBack Veri="Page Header" />
       <ScrollView style={{ flex: 1 }}>
         {/* Header  */}
         <View style={{ alignItems: "center", flex: 1 }}>
           <View style={styles.headerArea}>
-            <Text style={styles.header}>Mainnet bakiyenizin ön izlemesi</Text>
+            <Text style={styles.header}>Lorem Ipsum</Text>
           </View>
 
           <View style={styles.textArea}>
             <Text style={styles.text}>
-              This is a breakdown of your total mined also whown at hte top of
-              this mining app
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              quis lectus ut erat mattis egestas. Vestibulum non neque
+              consequat, sodales nibh vitae, gravida enim
             </Text>
           </View>
         </View>
@@ -43,17 +43,15 @@ const MainnetScreen = () => {
           >
             <View style={{ marginHorizontal: "8%" }}>
               <Text style={{ fontSize: 20, fontWeight: "bold" }}>0.189</Text>
-              <Text>unverfied</Text>
+              <Text>Lorem </Text>
             </View>
             <View style={{ marginHorizontal: "10%" }}>
               <Text style={{ fontSize: 20, fontWeight: "bold" }}>0.000</Text>
-              <Text>transferable</Text>
+              <Text>Lorem </Text>
             </View>
             <View style={{ marginHorizontal: "10%" }}>
-              <Text style={{ fontSize: 20, fontWeight: "bold" }} s>
-                0.000
-              </Text>
-              <Text>migrated</Text>
+              <Text style={{ fontSize: 20, fontWeight: "bold" }}>0.000</Text>
+              <Text>Lorem</Text>
             </View>
           </View>
           <View
@@ -66,7 +64,7 @@ const MainnetScreen = () => {
             }}
           ></View>
           <View style={styles.barArea}>
-            <Text style={styles.barAreaText}>Doğrulanmamış Bakiye</Text>
+            <Text style={styles.barAreaText}>Lorem ipsum dolor sit amet,</Text>
 
             <TouchableOpacity style={{ borderWidth: 1, padding: 5 }}>
               <Text
@@ -77,7 +75,7 @@ const MainnetScreen = () => {
             </TouchableOpacity>
           </View>
           <View style={styles.barArea}>
-            <Text style={styles.barAreaText}>Doğrulanmamış Bakiye</Text>
+            <Text style={styles.barAreaText}>Lorem ipsum dolor sit amet,</Text>
 
             <TouchableOpacity style={{ borderWidth: 1, padding: 5 }}>
               <Text
@@ -88,7 +86,7 @@ const MainnetScreen = () => {
             </TouchableOpacity>
           </View>
           <View style={styles.barArea}>
-            <Text style={styles.barAreaText}>Doğrulanmamış Bakiye</Text>
+            <Text style={styles.barAreaText}>Lorem ipsum dolor sit amet,</Text>
 
             <TouchableOpacity style={{ borderWidth: 1, padding: 5 }}>
               <Text
@@ -116,7 +114,7 @@ const MainnetScreen = () => {
               color="black"
               style={{ marginLeft: 15 }}
             />
-            <Text style={{ marginLeft: 15 }}>Mainnet Kontrol Listesi</Text>
+            <Text style={{ marginLeft: 15 }}>Lorem ipsum dolor sit amet,</Text>
             <AntDesign
               name="caretright"
               size={24}
@@ -140,7 +138,7 @@ const MainnetScreen = () => {
               color="black"
               style={{ marginLeft: 15 }}
             />
-            <Text style={{ marginLeft: 15 }}>Mainnet Kontrol Listesi</Text>
+            <Text style={{ marginLeft: 15 }}>Lorem ipsum dolor sit amet,</Text>
             <AntDesign
               name="caretright"
               size={24}
@@ -164,7 +162,7 @@ const MainnetScreen = () => {
               color="black"
               style={{ marginLeft: 15 }}
             />
-            <Text style={{ marginLeft: 15 }}>Mainnet Kontrol Listesi</Text>
+            <Text style={{ marginLeft: 15 }}>Lorem ipsum dolor sit amet,</Text>
             <AntDesign
               name="caretright"
               size={24}
@@ -188,7 +186,7 @@ const MainnetScreen = () => {
               color="black"
               style={{ marginLeft: 15 }}
             />
-            <Text style={{ marginLeft: 15 }}>Increase Trasferable Balance</Text>
+            <Text style={{ marginLeft: 15 }}>Lorem ipsum dolor sit amet,</Text>
             <AntDesign
               name="caretright"
               size={24}

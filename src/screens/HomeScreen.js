@@ -27,7 +27,7 @@ const HomeScreen = () => {
           <Image
             source={require("../../assets/img/coin.png")}
             style={{
-              width: "90%",
+              width: "100%",
               height: 300,
               marginTop: "10%",
               marginBottom: 20,
@@ -36,7 +36,7 @@ const HomeScreen = () => {
               resizeMode: "contain",
             }}
           />
-          <View style={{ width: "10%" }}>
+          {/* <View style={{ width: "10%" }}>
             <TouchableOpacity onPress={() => {}} style={styles.iconContainer}>
               <Entypo name="chat" size={24} color="white" />
               <Text style={styles.iconText}>Chat</Text>
@@ -53,7 +53,7 @@ const HomeScreen = () => {
               />
               <Text style={styles.iconText}>Lightning</Text>
             </TouchableOpacity>
-          </View>
+          </View> */}
         </View>
 
         <View style={styles.bottomView}>
