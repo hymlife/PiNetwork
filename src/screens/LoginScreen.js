@@ -6,12 +6,6 @@ const LoginScreen = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleRegister = () => {
-    axios
-      .post("http://localhost:3000/register", { username, password })
-      .then((response) => console.log(response.data))
-      .catch((error) => console.error("Error registering user:", error));
-  };
   const navigation = useNavigation();
   const handleLogin = () => {
     axios
@@ -20,7 +14,19 @@ const LoginScreen = () => {
         console.log(response.data);
         navigation.navigate("Ana Sayfa");
       })
-      .catch((error) => console.error("Error logging in:", error));
+      .catch((error) => {
+        if (error.response) {
+          if (error.response.status === 401) {
+            Alert.alert("Login Failed", "Username and password do not match.");
+          } else if (error.response.status === 404) {
+            Alert.alert("Login Failed", "Username not found.");
+          } else {
+            console.error("Error logging in:", error);
+          }
+        } else {
+          console.error("Error logging in:", error);
+        }
+      });
   };
 
   return (

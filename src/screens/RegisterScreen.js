@@ -13,15 +13,6 @@ const RegisterScreen = () => {
       .catch((error) => console.error("Error registering user:", error));
   };
   const navigation = useNavigation();
-  const handleLogin = () => {
-    axios
-      .post("http://localhost:3000/login", { username, password })
-      .then((response) => {
-        console.log(response.data);
-        navigation.navigate("Ana Sayfa");
-      })
-      .catch((error) => console.error("Error logging in:", error));
-  };
 
   return (
     <View style={styles.container}>
